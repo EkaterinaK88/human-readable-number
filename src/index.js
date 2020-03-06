@@ -31,6 +31,7 @@ module.exports = function toReadable (number) {
     100: 'hundred',
   }
   let res = [];
+  if (number === 0) {res.push(numbers[0]);}
   let arr = String(number).split('');
   if (number % 100 < 20 || (number % 100) % 10 === 0) {
     if (number % 100 === 0) {
